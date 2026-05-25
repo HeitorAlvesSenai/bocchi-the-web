@@ -1,7 +1,65 @@
+@keyframes fadeInSite {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
 font-family: Arial, sans-serif;
 margin: 0;
-background: #f4f4f4;
+background-image: url('/assets/images/background.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+animation: fadeInSite 0.8s;
+}
+
+p {
+color: #000000;
+}
+
+section h1 {
+color: #000000;
+}
+
+h3 {
+color: #000000;
+}
+
+ul {
+    color: #000000;
+}
+
+.hitori {
+    color: #f01872;
+}
+.nijika {
+    color: #ff7b00;
+}
+.ryo {
+    color: #3330e4;
+}
+.ikuyo {
+    color: #e42020;
+}
+
+/* Container da Logo */
+.logo-container {
+    text-align: center;     /* Centraliza a imagem horizontalmente */
+    margin: 50px auto 50px; /* Margem: 20px acima, automático nas laterais, 10px abaixo */
+    width: 100%;
+    max-width: 600px;       /* Alinha com a largura máxima das suas seções */
+}
+
+/* Estilo da Imagem da Logo */
+.site-logo {
+    max-width: 200px;       /* Define a largura máxima que você quer para a logo */
+    height: auto;           /* Mantém a proporção da imagem sem distorcer */
+    display: inline-block;
+    border-radius: 8px;     /* Opcional: deixa as bordas da logo levemente arredondadas */
 }
 
 header {
@@ -29,17 +87,18 @@ color: #fff;
 
 main {
 margin-top: 80px; /* espaço para o header fixo */
-padding: 20px;
+padding: 120px;
+/* padding-bottom: 120px; espaço extra antes do footer */
 }
 
 section {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;   /* centraliza horizontalmente */
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 600px;    /* define largura máxima do bloco */
-    width: 90%;          /* ocupa até 90% da tela em telas pequenas */
+background: #ffffffd3;
+padding: 30px;
+margin: 20px auto;   /* centraliza horizontalmente */
+border-radius: 6px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+max-width: 600px;    /* define largura máxima do bloco */
+width: 90%;          /* ocupa até 90% da tela em telas pequenas */
 }
 
 section h2 {
@@ -48,21 +107,58 @@ padding: 15px;
 background: #0077cc;
 color: #fff;
 cursor: pointer;
-border-radius: 8px 8px 0 0;
+border-radius: 4px;
 }
 
 .content {
-display: none;
-padding: 20px;
+    /* Em vez de 'display: none', usamos max-height e opacity para permitir animação */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 20px; /* Zera o padding vertical enquanto fechado */
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, padding 0.5s ease-in-out;
 }
 
 .content.show {
-display: block;
+    max-height: 1000px; /* Um valor alto o suficiente para caber o seu texto */
+    opacity: 1;
+    padding: 20px; /* Devolve o padding quando aberto */
 }
 
+/* Estilo base do Footer */
 footer {
-background: #333;
-color: #fff;
-text-align: center;
-padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000; /* Garante que ele fique acima do conteúdo */
+}
+
+/* Classe que esconde o footer jogando ele para baixo da tela */
+footer.hidden {
+    transform: translateY(100%);
+}
+
+.agenda-shows {
+    list-style: none;
+    padding: 0;
+}
+
+.agenda-shows li {
+    background: #333;
+    color: #fff;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.agenda-shows li:hover {
+    background: #555;
+    cursor: pointer;
 }
