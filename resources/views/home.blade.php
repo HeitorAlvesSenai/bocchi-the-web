@@ -81,7 +81,40 @@
         <section id="contato">
             <h2>Contato</h2>
             <div class="content">
-            <p>Formulário ou informações de contato.</p>
+                <p>Quer trocar uma ideia, fazer uma proposta de show no STARRY ou enviar mensagens de apoio para as meninas? Deixe sua mensagem abaixo!</p>
+                
+                <form action="#" method="POST" class="formulario-contato">
+                    {{-- Nota: Se for disparar para uma rota Laravel real depois, não esqueça do @csrf --}}
+                    
+                    <div class="form-group">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Insira o seu nome..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail de Contato:</label>
+                        <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="" disabled selected>Selecione um assunto...</option>
+                            <option value="falar-com-banda">Mensagem para as integrantes (Fan Mail)</option>
+                            <option value="shows">Agendamento de Shows / Eventos</option>
+                            <option value="imprensa">Imprensa e Parcerias Comerciais</option>
+                            <option value="suporte">Problemas com Ingressos / Loja</option>
+                            <option value="outro">Outros Assuntos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Sua Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensagem 🎸</button>
+                </form>
             </div>
         </section>
     </main>
