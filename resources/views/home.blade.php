@@ -74,6 +74,7 @@
 
             <h3>🎫 Compras de Ingressos</h3>
             <p>Aqui você pode comprar os ingressos da casa de shows Starry.</p>
+            <a href="/compras" class="btn-enviar" style="text-decoration: none; display: inline-block; margin-top: 10px;">Garantir meu Ingresso ⚡</a>
             </div>
         </section>
 

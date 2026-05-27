@@ -16,7 +16,7 @@
         <section id="comprar">
             <h2>Garantir Ingressos (STARRY)</h2>
             <div class="content show"> <h1>Próximo Show Disponível</h1>
-                <p>Prepare-se para ouvir os riffs da <strong class="hitori">Hitori</strong> e a energia da <strong class="ikuyo">Kita</strong> ao vivo na icônica casa de shows STARRY!</p>
+                <p>Prepare-se para ouvir os riffs das nossas guitarristas e a energia que te espera no palco ao vivo na icônica casa de shows STARRY!</p>
                 
                 <div class="ticket-info-box">
                     <h3>📅 10/06 - Belo Horizonte</h3>
