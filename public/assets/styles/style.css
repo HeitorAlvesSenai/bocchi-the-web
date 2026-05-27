@@ -162,3 +162,58 @@ footer.hidden {
     background: #555;
     cursor: pointer;
 }
+
+/* Novo */
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff4a5a; /* Uma cor rosa/vermelha que combina com a vibe de J-Rock */
+}
+
+.btn-enviar {
+    background-color: #ff4a5a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-enviar:hover {
+    background-color: #e03e4d;
+}
