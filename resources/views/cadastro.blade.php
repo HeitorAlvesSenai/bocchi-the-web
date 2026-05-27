@@ -73,18 +73,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="ingresso-nome">Nome do Setor / Tipo:</label>
-                        <input type="text" id="ingresso-nome" name="nome_setor" placeholder="Ex: Pista Premium, VIP STARRY, Meia-Entrada..." required>
-                    </div>
-
-                    <div class="form-group">
                         <label for="ingresso-preco">Preço Unitário (R$):</label>
                         <input type="number" id="ingresso-preco" name="preco" step="0.01" min="0.00" placeholder="0.00" required>
                     </div>
 
                     <div class="form-group">
                         <label for="ingresso-quantidade">Quantidade Disponível (Carga total do Lote):</label>
-                        <input type="number" id="ingresso-quantidade" name="quantidade_total" min="1" placeholder="Ex: 200" required>
+                        <input type="number" id="ingresso-quantidade" name="quantidade_total" min="1" max="50" placeholder="Maximo: 50" required>
                     </div>
 
                     <div class="form-group">
