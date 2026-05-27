@@ -3,7 +3,7 @@
     <header id="header">
         <h1>STARRY - Painel Admin</h1>
         <nav>
-            <a href="{{ url('/') }}#inicio">Início</a>
+            <a href="/" #inicio">Início</a>
             <a href="#cadastro-show">Novo Show</a>
             <a href="#cadastro-ingresso">Novo Ingresso</a>
         </nav>
