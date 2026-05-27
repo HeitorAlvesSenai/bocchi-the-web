@@ -13,7 +13,8 @@ margin: 0;
 background-image: url('/assets/images/background.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-size: 100% 100%;
+background-size: cover;
+background-position: center;
 animation: fadeInSite 0.8s;
 }
 
@@ -87,8 +88,44 @@ color: #fff;
 
 main {
 margin-top: 80px; /* espaço para o header fixo */
-padding: 120px;
+padding: 20px;
 /* padding-bottom: 120px; espaço extra antes do footer */
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 60px 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    section {
+        width: 95%;      /* Ocupa quase toda a largura */
+        padding: 15px;   /* Reduz o espaço interno */
+        margin: 10px auto;
+    }
+
+    header {
+        padding: 10px;   /* Header mais fino no mobile */
+    }
+
+    nav a {
+        margin: 0 8px;   /* Diminui o espaço entre links para não quebrar linha */
+        font-size: 0.9rem;
+    }
+
+    .logo-container {
+        margin: 20px auto;
+    }
+
+    .site-logo {
+        max-width: 150px; /* Logo um pouco menor */
+    }
+
+    .btn-enviar {
+        width: 100%;     /* Botão ocupa a largura toda no toque */
+        align-self: stretch;
+    }
 }
 
 section {
