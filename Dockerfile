@@ -1,6 +1,6 @@
 FROM php:8.3-apache
 # Define a imagem base do PHP 8.3 com Apache
-RUN apt-get update &amp;&amp; apt-get install -y \
+RUN apt-get update && apt-get install -y \
     git \
     curl \
     libpng-dev \
@@ -10,7 +10,7 @@ RUN apt-get update &amp;&amp; apt-get install -y \
     unzip \
     libpq-dev \
     libzip-dev \
-    &amp;&amp; docker-php-ext-install pdo pdo_pgsql zip
+    && docker-php-ext-install pdo pdo_pgsql zip
 # Instala dependências necessárias para Projeto e PostgreSQL
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copia o Composer para dentro do container
