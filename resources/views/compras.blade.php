@@ -3,7 +3,7 @@
     <header id="header">
         <h1>Kessoku Band - Ingressos</h1>
         <nav>
-            <a href="{{ url('/') }}#servico">Serviços</a>
+            <a href="/">Voltar</a>
             <a href="#comprar">Comprar</a>
         </nav>
     </header>
