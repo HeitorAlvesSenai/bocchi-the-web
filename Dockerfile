@@ -21,7 +21,7 @@ COPY . .
 # Copia todos os arquivos do projeto para dentro do container
 RUN composer install --no-dev --optimize-autoloader
 # Instala as dependências do Projeto em modo produção
-RUN cp .env.example .env
+RUN cp .env
 # Cria automaticamente o arquivo .env
 RUN php artisan key:generate
 # Gera automaticamente a APP_KEY do Projeto
